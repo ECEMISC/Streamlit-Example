@@ -15,15 +15,19 @@ from nltk.stem import WordNetLemmatizer
 from gensim import corpora
 from gensim.models.ldamodel import LdaModel
 import pyLDAvis
-import pyLDAvis.gensim as gensimvis
-
+import pyLDAvis.gensim_models as gensimvis
+import base64
 
 warnings.filterwarnings('ignore')
 
-nltk.download('stopwords')
-nltk.download('wordnet')
-import streamlit as st
-import base64
+@st.cache_resource
+def setup_nltk():
+    nltk.download('stopwords')
+    nltk.download('wordnet')
+    return True
+
+setup_nltk()
+
 
 
 # To set the background color of the home page, use CSS
