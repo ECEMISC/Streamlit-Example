@@ -44,7 +44,7 @@ st.markdown(
 
 # Add image to sidebar
 st.sidebar.image(
-    "/Users/ecemzeynepiscanli/PycharmProjects/SMA_STREAMLIT/amazon_logo.jpg",
+    "https://raw.githubusercontent.com/ECEMISC/Streamlit-Example/main/amazon_logo.JPG",
     use_column_width=True
 )
 
